@@ -1,0 +1,52 @@
+<html>
+    <hand>
+
+    </hand>
+    <body>
+        <input type="text" size="2"  id="1" >
+        <input type="text" size="2"  id="2" >
+        <br>
+        <br>
+        <input type="text" size="2"  id="3" >
+        <input type="text" size="2"  id="4" >
+        <br>
+        <input type="text" size="2"  id="5" >
+        <button onclick="rundButt(1,90)">Loto</button>
+        <input type="text" size="2" id="6" >
+        <button onclick="rundButt1(1,90)">Check</button>
+        
+        <script>
+            function rundButt(min,max)
+            {
+                document.getElementById('1').value = Math.floor(Math.random() * (max - min)) + min;
+                document.getElementById('2').value = Math.floor(Math.random() * (max - min)) + min;
+                document.getElementById('3').value = Math.floor(Math.random() * (max - min)) + min;
+                document.getElementById('4').value = Math.floor(Math.random() * (max - min)) + min;
+                document.getElementById('5').value = Math.floor(Math.random() * (max - min)) + min;
+                
+            }
+            function rundButt1(min,max)
+            {
+                document.getElementById('6').value = Math.floor(Math.random() * (max - min)) + min;
+                      
+
+                if (document.getElementById('1').value === document.getElementById('6').value)  {
+                   document.getElementById('1').value = 'x';                   
+                }
+                else if(document.getElementById('2').value === document.getElementById('6').value) {
+                    document.getElementById('2').value = 'x';                   
+                }
+                else if(document.getElementById('3').value === document.getElementById('6').value) {
+                    document.getElementById('3').value = 'x';                    
+                }
+                else if(document.getElementById('4').value === document.getElementById('6').value) {
+                   document.getElementById('4').value = 'x';                              
+                }
+                else if(document.getElementById('5').value === document.getElementById('6').value) {
+                   document.getElementById('5') = 'x';        
+                }
+            }
+        </script> 
+        
+    </body>
+</html>
